@@ -8,18 +8,19 @@ set -o pipefail # Bashism
 if [ -e .mirror ]; then
     kali_mirror=$(cat .mirror)
 else
-    kali_mirror=http://kali.download/kali
+    kali_mirror="http://kali.download/kali" # replace this whit your own local kali mirror (if you have it) or do:   echo "http://192.168.1.26/kali/" > .mirror
 fi
 
 ### DO NOT EDIT THE REST OF THIS FILE ###
 
-public_kali_mirror=http://http.kali.org/kali
+public_kali_mirror="http://http.kali.org/kali" # this MUST be an PUBLIC kali mirrror so if you have your own private/local one this has to stay as it is since it will be saved on built iso and used for updates
 
 # Detect target architecture and filter args
 temp=""
 arch=$(dpkg --print-architecture)
 dist="kali-rolling"
 lb_opts=""
+
 while [ $# -gt 0 ]; do
    	arg="$1"
 	case "$arg" in
