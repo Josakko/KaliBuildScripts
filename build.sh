@@ -6,7 +6,7 @@ set -e
 set -o pipefail # Bashism
 
 # Kali's default values
-KALI_DIST="kali-rolling"
+KALI_DIST="kali-rolling" #kali-rolling
 KALI_VERSION="kali"  # 2023.1
 KALI_VARIANT="default"
 IMAGE_TYPE="installer"
@@ -236,7 +236,7 @@ case "$IMAGE_TYPE" in
 		ver_debootstrap=$(dpkg-query -f '${Version}' -W debootstrap)
 		if dpkg --compare-versions "$ver_debootstrap" lt "1.0.97"; then
 			echo "ERROR: You need debootstrap (>= 1.0.97), you have $ver_debootstrap" >&2
-			exit 1
+			exit 1 # Comment this for non kali distros
 		fi
 		debug "ver_debootstrap: $ver_debootstrap"
 	;;
@@ -335,6 +335,7 @@ case "$IMAGE_TYPE" in
 			profiles="kali offline"
 			auto_profiles="kali offline"
 		fi
+
 		debug "DISKTYPE: $DISKTYPE"
 		debug "profiles: $profiles"
 		debug "auto_profiles: $auto_profiles"
@@ -343,7 +344,7 @@ case "$IMAGE_TYPE" in
 		if [ -e .mirror ]; then
 			kali_mirror=$(cat .mirror)
 		else
-			kali_mirror=http://archive.kali.org/kali/
+			kali_mirror="http://archive.kali.org/kali/" # replace this whit your own local kali mirror (if you have it)  or do:   echo "http://192.168.1.26/kali/" > .mirror
 		fi
 		if ! echo "$kali_mirror" | grep -q '/$'; then
 			kali_mirror="$kali_mirror/"
