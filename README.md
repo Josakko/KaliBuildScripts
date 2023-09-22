@@ -2,7 +2,7 @@
 Unofficial scripts for building kali installer/live image
 
 ## Usage
-1. Install lb simple cdd:
+1. Install lb, simple cdd, cdebootstrap, git and curl:
 
 ```
 sudo apt update
