@@ -13,7 +13,7 @@ fi
 
 ### DO NOT EDIT THE REST OF THIS FILE ###
 
-public_kali_mirror="http://http.kali.org/kali" # this MUST be an PUBLIC kali mirrror so if you have your own private/local one this has to stay as it is since it will be saved on built iso and used for updates
+public_kali_mirror="http://http.kali.org/kali" # this MUST be an PUBLIC kali mirrror so if you have your own private/local one this has to stay as it is since it will be saved (/etc/apt/sources.list) on built iso and used by apt 
 
 # Detect target architecture and filter args
 temp=""
