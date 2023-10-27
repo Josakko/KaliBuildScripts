@@ -137,7 +137,7 @@ print_help() {
 }
 
 # Allowed command line options
-. $(dirname $0)/.getopt.sh
+. $(dirname $0)/getopt.sh
 
 BUILD_LOG="$(pwd)/build.log"
 debug "BUILD_LOG: $BUILD_LOG"
