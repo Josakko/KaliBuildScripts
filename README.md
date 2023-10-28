@@ -24,5 +24,6 @@ If you have local (private) kali mirror before running `build.sh` in root dir of
 ```sh
 echo "http://{your ip here}/kali" > .mirror
 
+chmod +x build.sh
 ./build.sh
 ```
