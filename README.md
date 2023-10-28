@@ -16,6 +16,7 @@ git clone https://github.com/Josakko/KaliBuildScripts.git
 ```sh
 cd KaliBuildScripts
 
+chmod +x build.sh
 ./build.sh
 ```
 ## Notes
