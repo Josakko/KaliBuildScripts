@@ -41,13 +41,13 @@ rm -f autorun.inf win32-loader.ini setup.exe
 # Replace Debian specific documentation
 rm -rf css
 cat >README.txt <<EOF
-This disc contains an installer for Kali Linux...
+This disc contains an unofficial installer for Kali Linux by Josakko
 EOF
 cat >README.html <<EOF
 <html>
 <head><title>Kali Linux Installer Disc</title></head>
 <body>
-This disc contains an installer for Kali Linux...
+This disc contains an unofficial installer for Kali Linux by Josakko...
 </body>
 </html>
 EOF
