@@ -123,7 +123,8 @@ clean() {
 	run_and_log $SUDO rm -rf "$(pwd)/simple-cdd/tmp"
 	run_and_log $SUDO rm -rf "$(pwd)/simple-cdd/debian-cd"
 	run_and_log $SUDO rm -rf "$(pwd)/simple-cdd/images"
-	run_and_log $SUDO rm -rf "$(pwd)/build.log"
+	run_and_log $SUDO rm -rf "$(pwd)/simple-cdd/profiles/kali.downloads"
+	$SUDO rm -rf "$(pwd)/build.log"
 }
 
 print_help() {
