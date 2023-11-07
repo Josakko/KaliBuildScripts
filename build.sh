@@ -122,6 +122,8 @@ clean() {
 	# Installer
 	run_and_log $SUDO rm -rf "$(pwd)/simple-cdd/tmp"
 	run_and_log $SUDO rm -rf "$(pwd)/simple-cdd/debian-cd"
+	run_and_log $SUDO rm -rf "$(pwd)/simple-cdd/images"
+	run_and_log $SUDO rm -rf "$(pwd)/build.log"
 }
 
 print_help() {
@@ -411,4 +413,3 @@ run_and_log mv -f $IMAGE_NAME $TARGET_DIR/$(target_image_name $KALI_ARCH)
 run_and_log mv -f "$BUILD_LOG" $TARGET_DIR/$(target_build_log $KALI_ARCH)
 
 run_and_log echo -e "\n***\nGENERATED KALI IMAGE: $TARGET_DIR/$(target_image_name $KALI_ARCH)\n***"
-
