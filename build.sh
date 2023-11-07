@@ -122,8 +122,6 @@ clean() {
 	# Installer
 	run_and_log $SUDO rm -rf "$(pwd)/simple-cdd/tmp"
 	run_and_log $SUDO rm -rf "$(pwd)/simple-cdd/debian-cd"
-	run_and_log $SUDO rm -rf "$(pwd)/simple-cdd/images"
-	run_and_log $SUDO rm -rf "$(pwd)/build.log"
 }
 
 print_help() {
@@ -224,7 +222,7 @@ fi
 debug "IMAGE_TYPE: $IMAGE_TYPE"
 case "$IMAGE_TYPE" in
 	live)
-		if [ ! -d "$(dirname $0)/config/variant-$KALI_VARIANT" ]; then
+		if [ ! -d "$(dirname $0)/kali-config/variant-$KALI_VARIANT" ]; then
 			echo "ERROR: Unknown variant of Kali live configuration: $KALI_VARIANT" >&2
 		fi
 
@@ -243,7 +241,7 @@ case "$IMAGE_TYPE" in
 		debug "ver_debootstrap: $ver_debootstrap"
 	;;
 	installer)
-		if [ ! -d "$(dirname $0)/config/installer-$KALI_VARIANT" ]; then
+		if [ ! -d "$(dirname $0)/kali-config/installer-$KALI_VARIANT" ]; then
 			echo "ERROR: Unknown variant of Kali installer configuration: $KALI_VARIANT" >&2
 		fi
 
@@ -360,7 +358,7 @@ case "$IMAGE_TYPE" in
 
 		# Use the same grub theme as in the live images
 		# Until debian-cd is smart enough: http://bugs.debian.org/1003927
-		cp -f config/common/bootloaders/grub-pc/grub-theme.in simple-cdd/debian-cd/data/$CODENAME/grub-theme.in
+		cp -f kali-config/common/bootloaders/grub-pc/grub-theme.in simple-cdd/debian-cd/data/$CODENAME/grub-theme.in
 
 		# Keep 686-pae udebs as we changed the default from 686
 		# to 686-pae in the debian-installer images
@@ -369,7 +367,7 @@ case "$IMAGE_TYPE" in
 		[ $? -eq 0 ] || failure
 
 		# Configure the kali profile with the packages we want
-		grep -v '^#' config/installer-$KALI_VARIANT/packages \
+		grep -v '^#' kali-config/installer-$KALI_VARIANT/packages \
 			> simple-cdd/profiles/kali.downloads
 		[ $? -eq 0 ] || failure
 

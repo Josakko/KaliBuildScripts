@@ -4,8 +4,8 @@ binary/*
 binary.*/*
 cache/*
 chroot/*
-#config/*
-images/*
+config/*
+images
 local/*
 simple-cdd/images/*
 simple-cdd/tmp/*
