@@ -9,7 +9,8 @@ configure_zsh() {
     if echo "${LIVE_CONFIG_CMDLINE}" | grep -qs 'nozsh'; then
 	return
     fi
-    chsh --shell /usr/bin/zsh kali
+    
+    chsh --shell /usr/bin/zsh josakko
     chsh --shell /usr/bin/zsh root
 }
 

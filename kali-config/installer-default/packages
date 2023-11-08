@@ -23,5 +23,5 @@ kali-tools-windows-resources
 
 # Graphical desktops
 kali-desktop-xfce
-#kali-desktop-gnome
-#kali-desktop-kde
+# kali-desktop-gnome
+# kali-desktop-kde
