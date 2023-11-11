@@ -2,18 +2,17 @@
 Unofficial scripts for building kali installer/live image
 
 ## Usage
-1. Install lb, simple cdd, cdebootstrap, git and curl then clone this repo:
+1. Install lb, simple cdd, cdebootstrap, git and curl:
 
 ```sh
 sudo apt update
 sudo apt install git live-build simple-cdd cdebootstrap curl -y
-
-git clone https://github.com/Josakko/KaliBuildScripts.git 
 ```
 
-2. Go into cloned repo and build ISO:
+2. Clone this repo and then cd in it and build ISO:
 
 ```sh
+git clone https://github.com/Josakko/KaliBuildScripts.git 
 cd KaliBuildScripts
 
 ./build.sh

@@ -7,7 +7,7 @@ set -o pipefail # Bashism
 
 # Kali's default values
 KALI_DIST="kali-rolling" #kali-rolling
-KALI_VERSION="kali"  # 2023.1
+KALI_VERSION=""  # 2023.1
 KALI_VARIANT="default"
 IMAGE_TYPE="installer"
 TARGET_DIR="$(dirname $0)/images"
