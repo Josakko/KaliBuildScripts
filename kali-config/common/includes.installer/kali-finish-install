@@ -50,7 +50,7 @@ configure_zsh() {
 	chsh --shell /usr/bin/zsh $user
     done
     echo "INFO: changing default shell of user root to zsh"
-    chsh --shell /usr/bin/zsh root
+    # chsh --shell /usr/bin/zsh root
 }
 
 configure_usergroups() {
