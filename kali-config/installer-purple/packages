@@ -6,7 +6,7 @@
 # For the complete list see: https://tools.kali.org/kali-metapackages
 kali-linux-firmware
 kali-system-gui
-#kali-themes-purple  # temporary, until we do it a better way
+kali-themes-purple  # temporary, until we do it a better way
 
 # Tools
 kali-tools-detect
@@ -15,7 +15,7 @@ kali-tools-protect
 kali-tools-recover
 kali-tools-respond
 kali-tools-reverse-engineering
-kali-system-core
+#kali-system-core
 
 # Graphical desktops
 kali-desktop-xfce

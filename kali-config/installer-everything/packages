@@ -12,9 +12,8 @@ kali-linux-large
 kali-linux-everything
 kali-tools-reverse-engineering
 kali-system-core
-kali-tools-windows-resources
 
 # Graphical desktops
 kali-desktop-xfce
-kali-desktop-gnome
-kali-desktop-kde
+# kali-desktop-gnome
+# kali-desktop-kde

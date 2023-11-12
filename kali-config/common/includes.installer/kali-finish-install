@@ -19,10 +19,10 @@ configure_sources_list() {
 # See https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/
 deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware
 
-# Additional line for source packages, recomended to uncomment, commented by default
+# Additional line for source packages, commented by default
 deb-src http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware
 END
-    apt update
+  ``  apt-get update
 }
 
 get_user_list() {
@@ -49,8 +49,6 @@ configure_zsh() {
 	echo "INFO: changing default shell of user '$user' to zsh"
 	chsh --shell /usr/bin/zsh $user
     done
-    echo "INFO: changing default shell of user root to zsh"
-    # chsh --shell /usr/bin/zsh root
 }
 
 configure_usergroups() {
@@ -77,5 +75,3 @@ configure_usergroups() {
 configure_sources_list
 configure_zsh
 configure_usergroups
-
-#apt upgrade -y

@@ -10,12 +10,9 @@
 kali-linux-firmware
 kali-linux-core
 kali-tools-top10
-kali-tools-reverse-engineering
-kali-tools-windows-resources
 kali-linux-default
-kali-system-core
+kali-tools-reverse-engineering
 
-# kali-linux-everything
 # NOTE: We would like to provide kali-linux-large in our installer images
 # but we end up with ISO images that are too big for our CDN. So disable
 # it for now.
