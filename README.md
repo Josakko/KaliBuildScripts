@@ -25,3 +25,18 @@ echo "http://{your ip here}/kali" > .mirror
 
 ./build.sh
 ```
+
+## Cross building for different arches
+
+When it comes to building to various arches just running `./build.sh` will build for your host arch.
+
+To for example build for x86 from x86_64 you can do this by specifying it:
+
+```sh
+./build.sh --arch i386
+```
+
+Other arches:
+
+x86: i386
+x86_64: amd64
